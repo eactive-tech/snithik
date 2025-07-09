@@ -1,4 +1,5 @@
-frappe.ready(() => {
+frappe.after_ajax(() => {
+
     if (frappe.views && frappe.views.BaseList) {
 
         const original_setup_defaults = frappe.views.BaseList.prototype.setup_defaults;
